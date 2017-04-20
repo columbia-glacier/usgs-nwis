@@ -1,6 +1,6 @@
 # USGS NWIS Site Data
 
-Preview this [Data Package](http://specs.frictionlessdata.io/data-packages/) using the [Data Package Viewer](http://data.okfn.org/tools/view?url=https://raw.githubusercontent.com/ezwelty/cg-data/master/usgs-nwis).
+Preview this [Data Package](http://specs.frictionlessdata.io/data-packages/) using the [Data Package Viewer](http://data.okfn.org/tools/view?url=https://github.com/columbia-glacier/usgs-nwis).
 
 ## Data
 
