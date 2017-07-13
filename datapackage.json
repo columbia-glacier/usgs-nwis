@@ -12,8 +12,8 @@
   ],
   "sources": [
     {
-      "name": "USGS National Water Information System (NWIS)",
-      "web": "https://nwis.waterdata.usgs.gov/nwis/"
+      "title": "USGS National Water Information System (NWIS)",
+      "path": "https://nwis.waterdata.usgs.gov/nwis/"
     }
   ],
   "resources": [
