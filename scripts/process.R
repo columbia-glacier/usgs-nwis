@@ -24,7 +24,7 @@ get_nwis <- function(site, parameters, begin_date, end_date = "", summary_interv
   }
   temp <- rep("on", length(parameters))
   names(temp) <- paste0("cb_", parameters)
-  query <- c(list(site_no = site, begin_date = begin_date, end_date = end_date), temp)
+  query <- c(list(site_no = site, begin_date = begin_date, end_date = end_date, format = "rdb"), temp)
   response <- httr::GET(url, query = query)
   txt_block <- rawToChar(response$content)
   txt_lines <- unlist(strsplit(txt_block, "\n"))
@@ -48,4 +48,5 @@ get_nwis <- function(site, parameters, begin_date, end_date = "", summary_interv
 
 # https://nwis.waterdata.usgs.gov/nwis/dv?site_no=15281000
 df <- get_nwis(15281000, c(discharge = "00060"), begin_date = "1959-01-01", summary_interval = "daily")
+names(df) <- c("date", "discharge")
 write.csv(df, file.path("data/knik-river.csv"), na = "", row.names = FALSE, quote = FALSE)
